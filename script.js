@@ -67,6 +67,8 @@ randomNumber(100);
 // do {
 //     let arrRandom = Math.floor(Math.random() * max + 1);
 // } while (arrFake.length < 16) {
+//     arrFake.includes(arrRandom);
+//     arrFake.push(arrRandom);
 
 // }
 
