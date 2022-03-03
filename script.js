@@ -11,7 +11,7 @@ function grid (max){
         container.append(item);
         
         if(max == 100) {
-            item.classList.add('easy')
+            item.classList.add('easy');
         } else if (max == 81) {
             item.classList.add('medium');
         } else {
@@ -22,7 +22,6 @@ function grid (max){
             this.classList.add('bk-color');
         })
     }
-    
 }
 
 btnPlay.addEventListener('click', function() {
@@ -52,7 +51,7 @@ function randomNumber(max) {
     
 }
 
-randomNumber(100);
+// randomNumber(100);
 // randomNumber(81);
 // randomNumber(49);
 
