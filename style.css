@@ -72,6 +72,10 @@ h2{
     background-color: #8ea1e1;
 }
 
+.bk-red{
+    background-color: red;
+}
+
 footer{
     height: 6vh;
     display: flex;
