@@ -38,15 +38,36 @@ btnPlay.addEventListener('click', function() {
     }
 })
 
-function randomNumber(min, max) {
-    while (arrFake.length < 16) {
-        let arrRandom = Math.floor(Math.random() * (max - min + 1) + min);
-        if (arrFake.indexOf(arrRandom) === -1) arrFake.push(arrRandom);
-        console.log(arrFake)
+function randomNumber(max) {
+
+    for(let i = 1; i <= 16; i++) {
+        let arrRandom = Math.floor(Math.random() * max + 1);
+        
+        while(arrFake.includes(arrRandom)) {
+            let arrRandom = Math.floor(Math.random() * max + 1);
+        }
+        
+        arrFake.push(arrRandom);
+        
+        console.log(arrRandom);
     }
+    
 }
 
-randomNumber(1, 100);
-randomNumber(1, 81);
-randomNumber(1, 49);
+randomNumber(100);
+// randomNumber(81);
+// randomNumber(49);
 
+
+
+
+
+
+
+
+
+// while (arrFake.length < 16) {
+//     let arrRandom = Math.floor(Math.random() * max + 1);
+//     if (arrFake.indexOf(arrRandom) === -1) arrFake.push(arrRandom);
+//     console.log(arrFake)
+// }
