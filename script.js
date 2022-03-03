@@ -1,6 +1,7 @@
 const btnPlay = document.getElementById('btn-play');
 const container = document.querySelector('.container-box');
 const select = document.getElementById('difficulty');
+const arrFake = [];
 
 function grid (max){
 
@@ -36,3 +37,13 @@ btnPlay.addEventListener('click', function() {
         grid(49);
     }
 })
+
+function randomNumber(min, max) {
+    while (arrFake.length < 16) {
+        let arrRandom = Math.floor(Math.random() * (max - min + 1) + min);
+        if (arrFake.indexOf(arrRandom) === -1) arrFake.push(arrRandom);
+        console.log(arrFake)
+    }
+}
+
+randomNumber(1, 100)
