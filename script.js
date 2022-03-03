@@ -46,4 +46,7 @@ function randomNumber(min, max) {
     }
 }
 
-randomNumber(1, 100)
+randomNumber(1, 100);
+randomNumber(1, 81);
+randomNumber(1, 49);
+
