@@ -41,17 +41,16 @@ function randomNumber(max) {
 
     for(let i = 1; i <= 16; i++) {
         let arrRandom = Math.floor(Math.random() * max + 1);
-        
+    
         while (arrFake.includes(arrRandom)) {
             arrRandom = Math.floor(Math.random() * max + 1);
         }
         arrFake.push(arrRandom);
         console.log(arrFake)
-    }
-    
+    } 
 }
 
-// randomNumber(100);
+randomNumber(100);
 // randomNumber(81);
 // randomNumber(49);
 
@@ -63,15 +62,19 @@ function randomNumber(max) {
 
 
 
-// while (arrFake.length < 16) {
-//     let arrRandom = Math.floor(Math.random() * max + 1);
-//     if (arrFake.indexOf(arrRandom) === -1) arrFake.push(arrRandom);
-//     console.log(arrFake)
-// }
+
 
 // do {
 //     let arrRandom = Math.floor(Math.random() * max + 1);
 // } while (arrFake.length < 16) {
 
+// }
+
+
+
+// while (arrFake.length < 16) {
+//     let arrRandom = Math.floor(Math.random() * max + 1);
+//     if (arrFake.indexOf(arrRandom) === -1) arrFake.push(arrRandom);
+//     console.log(arrFake)
 // }
 
