@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2{
+    display: inline-block;
+    padding-left: 5em;
+}
+
+.side-item{
+    padding-right: 5em;
+}
+
+#difficulty{
+    padding: 0 1rem 0 1rem;
+}
+
+#btn-play{
+    padding: 0 1rem 0 1rem;
+}
+
+.container{
+    background-color: aquamarine;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.container-box{
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.easy{
+    width: calc(100% / 10);
+    height: 60px;
+}
+
+.medium{
+    width: calc(100% / 9);
+    height: 66px;
+}
+
+.hard {
+    width: calc(100% / 7);
+    height: 85px;
+}
+
+.bk-color{
+    background-color: #8ea1e1;
+}
+
+footer{
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    padding-left: 5em;
+}
+.foot a{
+    text-decoration: none;
+}
