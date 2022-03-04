@@ -1,7 +1,10 @@
 const btnPlay = document.getElementById('btn-play');
 const container = document.querySelector('.container-box');
 const select = document.getElementById('difficulty');
+const output = document. getElementById('output');
 
+
+//main game function
 function grid (max){
 
     for (let i = 1; i <= max; i++) {
@@ -9,7 +12,11 @@ function grid (max){
         item.classList.add('box');
         item.innerHTML = i;
         container.append(item);
+        output.innerHTML = '';
+        score = 0;
         
+
+        //creation three difficulty
         if(max == 100) {
             item.classList.add('easy');
         } else if (max == 81) {
@@ -18,12 +25,28 @@ function grid (max){
             item.classList.add('hard');
         }
 
+        // creation class score + lose
         item.addEventListener('click', function(){
-            this.classList.add('bk-color');
+            itemNumber = parseInt(this.innerHTML);
+            
+            if (arrFake.includes(itemNumber)){
+                this.classList.add('bk-red');
+            } else {
+                this.classList.add('bk-color');
+                score++;
+            }
+            
+            if (score == item) {
+                output.innerHTML = 'Hai perso, il tuo punteggio è: ' + score;
+                const cell = document.querySelectorAll('.box');
+
+            }
         })
     }
 }
 
+
+//button create grid for difficulty
 btnPlay.addEventListener('click', function() {
     container.innerHTML = '';
     
@@ -36,8 +59,9 @@ btnPlay.addEventListener('click', function() {
     }
 })
 
+//function number random red
+const arrFake = [];
 function randomNumber(max) {
-    const arrFake = [];
 
     for(let i = 1; i <= 16; i++) {
         let arrRandom = Math.floor(Math.random() * max + 1);
@@ -69,7 +93,6 @@ randomNumber(100);
 // } while (arrFake.length < 16) {
 //     arrFake.includes(arrRandom);
 //     arrFake.push(arrRandom);
-
 // }
 
 
