@@ -27,18 +27,23 @@ function grid (max){
 
         // creation class score + lose
         item.addEventListener('click', function(){
-            itemNumber = parseInt(this.innerHTML);
-            
-            if (arrFake.includes(itemNumber)){
-                this.classList.add('bk-red');
-            } else {
-                this.classList.add('bk-color');
-                score++;
-            }
-            
-            if (score == item) {
-                output.innerHTML = 'Hai perso, il tuo punteggio è: ' + score;
-                const cell = document.querySelectorAll('.box');
+        
+            let red = document.querySelector('.bk-red');
+
+            if (!red) {
+                itemNumber = parseInt(this.innerHTML);
+                if (arrFake.includes(itemNumber)){
+                    item.classList.add('bk-red');
+                } else {
+                    item.classList.add('bk-color');
+                    score++;
+                }
+                
+                if (score == item) {
+                    output.innerHTML = 'Hai perso, il tuo punteggio è: ' + score;
+                    const cell = document.querySelectorAll('.box');
+    
+                }
 
             }
         })
@@ -75,8 +80,6 @@ function randomNumber(max) {
 }
 
 randomNumber(100);
-// randomNumber(81);
-// randomNumber(49);
 
 
 
